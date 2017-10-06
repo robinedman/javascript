@@ -1597,38 +1597,6 @@ Other Style Guides
     }
     ```
 
-  <a name="comments--actionitems"></a><a name="17.3"></a>
-  - [18.4](#comments--actionitems) Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `FIXME: -- need to figure this out` or `TODO: -- need to implement`.
-
-  <a name="comments--fixme"></a><a name="17.4"></a>
-  - [18.5](#comments--fixme) Use `// FIXME:` to annotate problems.
-
-    ```javascript
-    class Calculator extends Abacus {
-      constructor() {
-        super();
-
-        // FIXME: shouldn’t use a global here
-        total = 0;
-      }
-    }
-    ```
-
-  <a name="comments--todo"></a><a name="17.5"></a>
-  - [18.6](#comments--todo) Use `// TODO:` to annotate solutions to problems.
-
-    ```javascript
-    class Calculator extends Abacus {
-      constructor() {
-        super();
-
-        // TODO: total should be configurable by an options param
-        this.total = 0;
-      }
-    }
-    ```
-
-**[⬆ back to top](#table-of-contents)**
 **[⬆ back to top](#table-of-contents)**
 
 ## Type Casting & Coercion
