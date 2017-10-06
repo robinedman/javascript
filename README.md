@@ -20,7 +20,7 @@ Other Style Guides
   1. [Arrow Functions](#arrow-functions)
   1. [Classes & Constructors](#classes--constructors)
   1. [Modules](#modules)
-  1. [Iterators and Generators](#iterators-and-generators)
+  1. [Iterators](#iterators-and-generators)
   1. [Properties](#properties)
   1. [Variables](#variables)
   1. [Hoisting](#hoisting)
@@ -1051,7 +1051,7 @@ Other Style Guides
 
 **[⬆ back to top](#table-of-contents)**
 
-## Iterators and Generators
+## Iterators
 
   <a name="iterators--nope"></a><a name="11.1"></a>
   - [11.1](#iterators--nope) Don’t use iterators. Prefer JavaScript’s higher-order functions instead of loops like `for-in` or `for-of`. eslint: [`no-iterator`](http://eslint.org/docs/rules/no-iterator.html) [`no-restricted-syntax`](http://eslint.org/docs/rules/no-restricted-syntax)
@@ -1095,72 +1095,6 @@ Other Style Guides
 
     // best (keeping it functional)
     const increasedByOne = numbers.map(num => num + 1);
-    ```
-
-  <a name="generators--nope"></a><a name="11.2"></a>
-  - [11.2](#generators--nope) Don’t use generators for now.
-
-    > Why? They don’t transpile well to ES5.
-
-  <a name="generators--spacing"></a>
-  - [11.3](#generators--spacing) If you must use generators, or if you disregard [our advice](#generators--nope), make sure their function signature is spaced properly. eslint: [`generator-star-spacing`](http://eslint.org/docs/rules/generator-star-spacing)
-
-    > Why? `function` and `*` are part of the same conceptual keyword - `*` is not a modifier for `function`, `function*` is a unique construct, different from `function`.
-
-    ```javascript
-    // bad
-    function * foo() {
-      // ...
-    }
-
-    // bad
-    const bar = function * () {
-      // ...
-    };
-
-    // bad
-    const baz = function *() {
-      // ...
-    };
-
-    // bad
-    const quux = function*() {
-      // ...
-    };
-
-    // bad
-    function*foo() {
-      // ...
-    }
-
-    // bad
-    function *foo() {
-      // ...
-    }
-
-    // very bad
-    function
-    *
-    foo() {
-      // ...
-    }
-
-    // very bad
-    const wat = function
-    *
-    () {
-      // ...
-    };
-
-    // good
-    function* foo() {
-      // ...
-    }
-
-    // good
-    const foo = function* () {
-      // ...
-    };
     ```
 
 **[⬆ back to top](#table-of-contents)**
