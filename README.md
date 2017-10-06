@@ -32,8 +32,6 @@ Other Style Guides
   1. [Variables](#variables)
   1. [Hoisting](#hoisting)
   1. [Comparison Operators & Equality](#comparison-operators--equality)
-  1. [Blocks](#blocks)
-  1. [Control Statements](#control-statements)
   1. [Comments](#comments)
   1. [Type Casting & Coercion](#type-casting--coercion)
   1. [Naming Conventions](#naming-conventions)
@@ -1874,113 +1872,6 @@ Other Style Guides
     const foo = a || b;
     const bar = !!c;
     const baz = !c;
-    ```
-
-**[⬆ back to top](#table-of-contents)**
-
-## Blocks
-
-  <a name="blocks--braces"></a><a name="16.1"></a>
-  - [16.1](#blocks--braces) Use braces with all multi-line blocks.
-
-    ```javascript
-    // bad
-    if (test)
-      return false;
-
-    // good
-    if (test) return false;
-
-    // good
-    if (test) {
-      return false;
-    }
-
-    // bad
-    function foo() { return false; }
-
-    // good
-    function bar() {
-      return false;
-    }
-    ```
-
-  <a name="blocks--cuddled-elses"></a><a name="16.2"></a>
-  - [16.2](#blocks--cuddled-elses) If you're using multi-line blocks with `if` and `else`, put `else` on the same line as your `if` block’s closing brace. eslint: [`brace-style`](http://eslint.org/docs/rules/brace-style.html) jscs:  [`disallowNewlineBeforeBlockStatements`](http://jscs.info/rule/disallowNewlineBeforeBlockStatements)
-
-    ```javascript
-    // bad
-    if (test) {
-      thing1();
-      thing2();
-    }
-    else {
-      thing3();
-    }
-
-    // good
-    if (test) {
-      thing1();
-      thing2();
-    } else {
-      thing3();
-    }
-    ```
-
-**[⬆ back to top](#table-of-contents)**
-
-## Control Statements
-
-  <a name="control-statements"></a>
-  - [17.1](#control-statements) In case your control statement (`if`, `while` etc.) gets too long or exceeds the maximum line length, each (grouped) condition could be put into a new line. It’s up to you whether the logical operator should begin or end the line.
-
-    ```javascript
-    // bad
-    if ((foo === 123 || bar === 'abc') && doesItLookGoodWhenItBecomesThatLong() && isThisReallyHappening()) {
-      thing1();
-    }
-
-    // bad
-    if (foo === 123 &&
-      bar === 'abc') {
-      thing1();
-    }
-
-    // bad
-    if (foo === 123
-      && bar === 'abc') {
-      thing1();
-    }
-
-    // good
-    if (
-      (foo === 123 || bar === "abc") &&
-      doesItLookGoodWhenItBecomesThatLong() &&
-      isThisReallyHappening()
-    ) {
-      thing1();
-    }
-
-    // good
-    if (foo === 123 && bar === 'abc') {
-      thing1();
-    }
-
-    // good
-    if (
-      foo === 123 &&
-      bar === 'abc'
-    ) {
-      thing1();
-    }
-
-    // good
-    if (
-      foo === 123
-      && bar === 'abc'
-    ) {
-      thing1();
-    }
     ```
 
 **[⬆ back to top](#table-of-contents)**
